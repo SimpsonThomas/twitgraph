@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import {
@@ -18,9 +17,8 @@ function App() {
         </Switch>
       </Router>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Test <code>src/App.js</code> and save to reload.
+          Test and save to reload.
         </p>
         <a
           className="App-link"
