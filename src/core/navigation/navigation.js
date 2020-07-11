@@ -2,16 +2,9 @@ import React, { Component } from "react";
 import { NavLink } from 'react-router-dom'
 
 import './navigation.css'
+import pageList from "../../constants/pages";
 
 class Navigation extends Component {
-    constructor(props) {
-        super(props)
-        const test = {
-            name : 'Test',
-            link : '/test'
-        }
-    }
-
     /**
      * Generates the buttons for the navbar
      * 
@@ -33,16 +26,12 @@ class Navigation extends Component {
     }
 
     render() {
-        const test = {
-            name : 'Test',
-            link : '/test'
-        }
-        console.log(test)
         return (
         <div className="navbar">
             <ul>
-                {this.navBut(test)}
-                {this.navBut(test)}
+                {pageList.map(page => {
+                    return this.navBut(page)
+                })}
                 
             </ul>
         </div>
