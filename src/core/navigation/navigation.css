@@ -6,6 +6,11 @@
     max-height: 50px;
     align-items: left;
     font-size: 2vmin;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 ul {

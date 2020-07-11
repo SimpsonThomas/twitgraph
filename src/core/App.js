@@ -8,7 +8,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+//  Link
 } from "react-router-dom";
 
 import notFound from '../pages/notFound';
@@ -33,14 +33,16 @@ class App extends React.Component {
         
         <Router>
           <Navigation></Navigation>
-            <Switch>
-              <Route exact path="/" component={home}/>
-              { pageList.map(page => this.routeMaker(page)) }
-              <Route 
-                component={notFound}
-                path="*"
-              />
-            </Switch>
+            <div className='mainApp'>
+              <Switch>
+                <Route exact path="/" component={home}/>
+                { pageList.map(page => this.routeMaker(page)) }
+                <Route 
+                  component={notFound}
+                  path="*"
+                />
+              </Switch>
+            </div>
         </Router>
       </div>
     );

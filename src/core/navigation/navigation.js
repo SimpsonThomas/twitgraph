@@ -30,7 +30,8 @@ class Navigation extends Component {
         <div className="navbar">
             <ul>
                 {pageList.map(page => {
-                    return this.navBut(page)
+                    if (page.nav) return this.navBut(page)
+                    else return null
                 })}
                 
             </ul>
