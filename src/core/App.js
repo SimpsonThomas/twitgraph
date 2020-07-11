@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 
 import notFound from '../pages/notFound';
+import home from '../pages/home';
 
 
 class App extends React.Component {
@@ -33,6 +34,7 @@ class App extends React.Component {
         <Router>
           <Navigation></Navigation>
             <Switch>
+              <Route exact path="/" component={home}/>
               { pageList.map(page => this.routeMaker(page)) }
               <Route 
                 component={notFound}
