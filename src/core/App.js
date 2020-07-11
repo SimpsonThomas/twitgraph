@@ -11,6 +11,7 @@ import {
   Link
 } from "react-router-dom";
 
+import notFound from '../pages/notFound';
 
 
 class App extends React.Component {
@@ -31,9 +32,13 @@ class App extends React.Component {
         
         <Router>
           <Navigation></Navigation>
-          <Switch>
-            { pageList.map(page => this.routeMaker(page)) }
-          </Switch>
+            <Switch>
+              { pageList.map(page => this.routeMaker(page)) }
+              <Route 
+                component={notFound}
+                path="*"
+              />
+            </Switch>
         </Router>
       </div>
     );

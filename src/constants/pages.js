@@ -1,3 +1,4 @@
+import home from "../pages/home"
 
 
 export const pageList = [
@@ -6,6 +7,12 @@ export const pageList = [
         link : '/test',
         nav : true,
         component : null
+    },
+    {
+        name : 'Home',
+        link : '/home',
+        nav : true,
+        component : home
     },
 ]
 
